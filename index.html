@@ -1,11 +1,10 @@
 <!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
-<title>Liberty Match 1776</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap">
 <style>
 /* ==========================================================
-   Liberty Match 1776 · Styles
+   Liberty Match 1776 · Level 1 Styles
    ========================================================== */
 :root {
   --navy: #1c2b4b;
@@ -36,140 +35,37 @@
 }
 
 html { height: 100%; box-sizing: border-box; font-size: 20px; -webkit-text-size-adjust: 100%; }
-html.t-larger { font-size: 22px; }
-html.t-largest { font-size: 24px; }
 *, *::before, *::after { box-sizing: inherit; }
-body {
-  height: 100%;
-  margin: 0;
-  overflow: hidden;
-  font-family: var(--ui);
-  font-size: 1rem;
-  line-height: 1.45;
-  color: var(--ink);
-  background:
-    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, .06) 0 1.2px, transparent 1.6px) 0 0 / 26px 26px,
-    var(--navy-deep);
-  -webkit-tap-highlight-color: transparent;
-}
+body { height: 100%; margin: 0; overflow: hidden; font-family: var(--ui); font-size: 1rem; line-height: 1.45; color: var(--ink); background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, .06) 0 1.2px, transparent 1.6px) 0 0 / 26px 26px, var(--navy-deep); -webkit-tap-highlight-color: transparent; }
 button { font: inherit; color: inherit; }
 svg { display: block; }
 h1, h2, h3 { margin: 0; text-wrap: balance; }
 p { margin: 0; }
-:focus-visible { outline: 3px solid var(--gilt-hi); outline-offset: 3px; }
 
-#app {
-  position: relative;
-  height: 100%;
-  max-width: 480px;
-  margin: 0 auto;
-  overflow: hidden;
-  background: var(--parch);
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, .3), 0 0 60px rgba(0, 0, 0, .5);
-  user-select: none;
-  -webkit-user-select: none;
-}
+#app { position: relative; height: 100%; max-width: 480px; margin: 0 auto; overflow: hidden; background: var(--parch); box-shadow: 0 0 0 1px rgba(0, 0, 0, .3), 0 0 60px rgba(0, 0, 0, .5); user-select: none; -webkit-user-select: none; }
 .screen { position: absolute; inset: 0; display: flex; flex-direction: column; }
-.parchment {
-  background:
-    radial-gradient(ellipse at 50% -10%, rgba(255, 252, 240, .75), transparent 60%),
-    radial-gradient(ellipse at 110% 110%, rgba(134, 97, 26, .22), transparent 55%),
-    radial-gradient(ellipse at -10% 90%, rgba(134, 97, 26, .16), transparent 50%),
-    var(--parch);
-}
+.parchment { background: radial-gradient(ellipse at 50% -10%, rgba(255, 252, 240, .75), transparent 60%), radial-gradient(ellipse at 110% 110%, rgba(134, 97, 26, .22), transparent 55%), radial-gradient(ellipse at -10% 90%, rgba(134, 97, 26, .16), transparent 50%), var(--parch); }
 [hidden] { display: none !important; }
-.pill span svg, .goal-moves svg { display: inline-block; width: 1.3rem; height: 1.3rem; vertical-align: -0.28rem; }
-.sb-star svg, .hand svg, .fly-coin svg { width: 100%; height: 100%; }
-.flag-box svg { width: 100%; height: auto; }
-.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.sb-star svg, .hand svg { width: 100%; height: 100%; }
 
-/* ---------- Buttons ---------- */
-.btn {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: .5rem;
-  min-height: 3rem;
-  padding: .6rem 1.2rem;
-  border: 0;
-  border-radius: 12px;
-  font-family: var(--ui);
-  font-weight: 700;
-  font-size: 1.05rem;
-  line-height: 1.15;
-  text-align: center;
-  cursor: pointer;
-  touch-action: manipulation;
-  transition: transform .08s ease, filter .15s ease;
-}
+/* Buttons */
+.btn { position: relative; display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 3rem; padding: .6rem 1.2rem; border: 0; border-radius: 12px; font-family: var(--ui); font-weight: 700; font-size: 1.05rem; line-height: 1.15; text-align: center; cursor: pointer; touch-action: manipulation; transition: transform .08s ease, filter .15s ease; }
 .btn:active { transform: translateY(2px); }
-.btn:disabled { filter: grayscale(.7) brightness(.9); cursor: default; }
-.btn svg { width: 1.4em; height: 1.4em; flex: none; }
-.btn-wide { width: 100%; }
-.btn-xl { min-height: 3.5rem; font-size: 1.2rem; }
-.btn-red, .btn-navy, .btn-green {
-  color: var(--white);
-  text-shadow: 0 1px 0 rgba(0, 0, 0, .35);
-}
-.btn-red::before, .btn-navy::before, .btn-green::before {
-  content: "";
-  position: absolute;
-  inset: 5px;
-  border: 1.5px dashed rgba(255, 238, 205, .55);
-  border-radius: 8px;
-  pointer-events: none;
-}
-.btn-red { background: linear-gradient(#c92b3f, #a41d30); box-shadow: inset 0 -4px 0 rgba(0, 0, 0, .22), 0 3px 0 #6b1220; }
-.btn-navy { background: linear-gradient(#304777, #1f3058); box-shadow: inset 0 -4px 0 rgba(0, 0, 0, .25), 0 3px 0 #0e1628; }
-.btn-green { background: linear-gradient(#36915c, #276d45); box-shadow: inset 0 -4px 0 rgba(0, 0, 0, .22), 0 3px 0 #173f28; }
-.btn-ghost {
-  background: var(--vellum);
-  color: var(--navy);
-  box-shadow: inset 0 0 0 2px var(--navy-3), 0 2px 0 rgba(28, 43, 75, .25);
-}
+.btn-xl { min-height: 3.5rem; font-size: 1.2rem; width: 100%; }
+.btn-red { color: var(--white); text-shadow: 0 1px 0 rgba(0, 0, 0, .35); background: linear-gradient(#c92b3f, #a41d30); box-shadow: inset 0 -4px 0 rgba(0, 0, 0, .22), 0 3px 0 #6b1220; }
+.btn-red::before { content: ""; position: absolute; inset: 5px; border: 1.5px dashed rgba(255, 238, 205, .55); border-radius: 8px; pointer-events: none; }
 
-/* ---------- Title screen ---------- */
-#scr-title { align-items: center; overflow-y: auto; }
-.bunting { width: 100%; height: auto; flex: none; }
-.broadside { width: 100%; padding: .4rem var(--gutter) 1.4rem; display: flex; flex-direction: column; align-items: center; gap: .5rem; text-align: center; }
-.bs-small { font-family: var(--serif); font-size: .82rem; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-2); }
-.bs-rule { width: 78%; height: 0; border-top: 2px solid var(--ink); border-bottom: 1px solid var(--ink); padding-top: 3px; }
-.bs-mid { font-family: var(--serif); font-style: italic; font-size: 1.05rem; color: var(--ink-2); }
-.bs-states { font-family: var(--serif); font-weight: 700; font-size: .95rem; letter-spacing: .08em; text-transform: uppercase; }
-.bs-title { font-family: var(--display); font-weight: 400; font-size: 3.7rem; line-height: .9; letter-spacing: .02em; color: var(--navy); text-shadow: 0 2px 0 rgba(255, 255, 255, .6); }
-.bs-title .red { color: var(--red); }
-.bs-year { display: flex; align-items: center; gap: .6rem; font-family: var(--display); font-size: 1.6rem; color: var(--red); letter-spacing: .1em; }
-.bs-year svg { width: 1rem; height: 1rem; color: var(--gilt); }
-.title-flag { width: min(64%, 280px); filter: drop-shadow(0 6px 10px rgba(43, 33, 24, .3)); }
-.title-flag svg { width: 100%; height: auto; }
-.bs-progress { font-weight: 700; color: var(--ink-2); font-size: .9rem; }
-.seal-btn { position: relative; width: 8.6rem; height: 8.6rem; border: 0; padding: 0; background: none; cursor: pointer; touch-action: manipulation; filter: drop-shadow(0 5px 6px rgba(80, 10, 10, .45)); transition: transform .1s ease; }
-.seal-btn:active { transform: scale(.96); }
-.seal-btn svg { position: absolute; inset: 0; width: 100%; height: 100%; }
-.seal-btn span { position: relative; font-family: var(--display); font-size: 1.75rem; letter-spacing: .08em; color: #fff3dc; text-shadow: 0 2px 0 #5e0f16; }
-
-/* ---------- Game screen ---------- */
-#scr-game {
-  background:
-    radial-gradient(ellipse at 50% 35%, rgba(60, 86, 144, .55), transparent 70%),
-    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, .07) 0 1px, transparent 1.5px) 0 0 / 22px 22px,
-    var(--navy);
-  color: #fff;
-}
-.gtop { flex: none; display: grid; grid-template-columns: auto 1fr; align-items: center; gap: .6rem; padding: .5rem var(--gutter) .3rem; }
-.gbtn { display: inline-flex; align-items: center; gap: .35rem; min-height: 2.6rem; padding: .25rem .8rem .25rem .6rem; border: 2px solid var(--gilt); border-radius: 999px; background: var(--navy-deep); color: #fff; font-weight: 700; font-size: .92rem; cursor: pointer; }
-.gbtn svg { width: 1.3rem; height: 1.3rem; }
-.gtitle { min-width: 0; text-align: right; line-height: 1.15; }
-.gtitle .lv { display: block; font-size: .75rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--gilt-hi); }
-.gtitle .nm { display: block; font-family: var(--serif); font-weight: 700; font-size: 1rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+/* Game screen */
+#scr-game { background: radial-gradient(ellipse at 50% 35%, rgba(60, 86, 144, .55), transparent 70%), radial-gradient(circle at 50% 50%, rgba(255, 255, 255, .07) 0 1px, transparent 1.5px) 0 0 / 22px 22px, var(--navy); color: #fff; }
+.gtop { flex: none; display: flex; justify-content: center; padding: .8rem var(--gutter) .3rem; }
+.gtitle { text-align: center; line-height: 1.15; }
+.gtitle .lv { display: block; font-size: .8rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--gilt-hi); }
+.gtitle .nm { display: block; font-family: var(--serif); font-weight: 700; font-size: 1.2rem; }
 .hud { flex: none; display: grid; grid-template-columns: 5.4rem 1fr; gap: .6rem; padding: .3rem var(--gutter) .4rem; }
 .hud-box { border-radius: 12px; background: linear-gradient(#fdf8ea, #efe1bd); color: var(--ink); box-shadow: 0 0 0 2.5px var(--gilt), inset 0 -3px 0 rgba(134, 97, 26, .18); }
 .moves { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: .25rem 0; }
 .moves .lbl, .goals-lbl { font-size: .68rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-2); }
 .moves .val { font-size: 2rem; font-weight: 700; line-height: 1; color: var(--navy); font-variant-numeric: tabular-nums; }
-.moves.low .val { color: var(--red); animation: throb 1s ease-in-out infinite; }
-@keyframes throb { 50% { transform: scale(1.12); } }
 .goals-box { display: flex; flex-direction: column; justify-content: center; padding: .3rem .6rem; gap: .15rem; }
 .goals { display: flex; flex-wrap: wrap; gap: .35rem .8rem; align-items: center; }
 .goal { display: inline-flex; align-items: center; gap: .3rem; font-weight: 700; font-size: 1.35rem; color: var(--navy); font-variant-numeric: tabular-nums; }
@@ -179,8 +75,6 @@ p { margin: 0; }
 .goal .ck { display: none; width: 1.5rem; height: 1.5rem; color: #fff; background: var(--green); border-radius: 50%; padding: .2rem; }
 .goal.done .n { display: none; }
 .goal.done .ck { display: block; }
-.goal.bump .gi { animation: bump .35s ease; }
-@keyframes bump { 40% { transform: scale(1.3); } }
 .scorebar { flex: none; padding: 0 var(--gutter) .35rem; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: .6rem; }
 .sb-track { position: relative; height: .75rem; border-radius: 999px; background: rgba(0, 0, 0, .35); box-shadow: inset 0 0 0 1.5px rgba(200, 150, 46, .6); }
 .sb-fill { position: absolute; left: 0; top: 0; bottom: 0; width: 0; border-radius: 999px; background: linear-gradient(90deg, var(--gilt), var(--gilt-hi)); transition: width .4s ease; }
@@ -188,6 +82,7 @@ p { margin: 0; }
 .sb-star.on { color: var(--gilt-hi); filter: drop-shadow(0 0 4px rgba(236, 199, 102, .9)); }
 .score-num { font-weight: 700; font-size: .95rem; font-variant-numeric: tabular-nums; min-width: 4.5rem; text-align: right; color: #f4e7c5; }
 
+/* Board */
 .board-wrap { position: relative; flex: 1; min-height: 0; display: grid; place-items: start center; align-content: start; padding: .45rem var(--gutter) .3rem; }
 .board { position: relative; border-radius: 12px; background: #f5ead0; box-shadow: 0 0 0 4px var(--gilt), 0 0 0 7px #5e440f, 0 12px 26px rgba(0, 0, 0, .5); touch-action: none; overflow: hidden; }
 .board.shake { animation: shake .32s ease; }
@@ -197,7 +92,6 @@ p { margin: 0; }
 .pieces { z-index: 2; }
 .tile { position: absolute; left: 0; top: 0; width: var(--cell); height: var(--cell); background: #f6ecd3; }
 .tile.alt { background: #eadcb6; }
-.tile svg { position: absolute; inset: 14%; width: 72%; height: 72%; opacity: .45; }
 .pc { position: absolute; left: 0; top: 0; width: var(--cell); height: var(--cell); will-change: transform; }
 .pc::before { content: ""; position: absolute; left: 18%; right: 18%; bottom: 6%; height: 14%; border-radius: 50%; background: radial-gradient(rgba(60, 40, 10, .35), transparent 70%); }
 .pc .ic { position: absolute; left: 7%; top: 6%; width: 86%; height: 86%; transition: transform .15s ease; }
@@ -209,8 +103,6 @@ p { margin: 0; }
 @keyframes spin { to { transform: rotate(360deg); } }
 .pc.sel .ic { transform: scale(1.12); }
 .pc.sel::after { content: ""; position: absolute; inset: 2%; border-radius: 24%; border: 4px solid #ffcf3f; box-shadow: 0 0 12px rgba(255, 207, 63, .9), inset 0 0 8px rgba(255, 207, 63, .6); }
-.pc.hint .ic { animation: wiggle .9s ease-in-out infinite; }
-@keyframes wiggle { 0%, 100% { transform: rotate(0) scale(1); } 25% { transform: rotate(-11deg) scale(1.1); } 75% { transform: rotate(11deg) scale(1.1); } }
 .pc.pop .ic { animation: pop .26s ease-in forwards; }
 @keyframes pop { 0% { transform: scale(1); } 40% { transform: scale(1.28); opacity: 1; } 100% { transform: scale(0); opacity: 0; } }
 .pc.pop::before { opacity: 0; }
@@ -218,48 +110,13 @@ p { margin: 0; }
 @keyframes made { 0% { transform: scale(.4) rotate(-30deg); } 60% { transform: scale(1.3) rotate(6deg); } 100% { transform: scale(1); } }
 .pc.hit .ic { animation: hit .3s ease; }
 @keyframes hit { 25% { transform: translateX(-8%) rotate(-5deg); } 75% { transform: translateX(8%) rotate(5deg); } }
-.pc.nope .ic { animation: hit .3s ease; }
 .board.tut .pc:not(.tut-on) { opacity: .3; }
 .board.tut .pc.tut-on::after { content: ""; position: absolute; inset: 0; border-radius: 24%; border: 4px solid #fff; box-shadow: 0 0 14px #fff; animation: ping2 1.2s ease-in-out infinite; }
 @keyframes ping2 { 50% { transform: scale(1.08); } }
 .hand { position: absolute; left: 0; top: 0; z-index: 5; width: calc(var(--cell) * .9); height: calc(var(--cell) * .9); pointer-events: none; filter: drop-shadow(0 3px 3px rgba(0, 0, 0, .4)); animation: handmove 1.8s ease-in-out infinite; }
 @keyframes handmove { 0%, 15% { transform: translate(var(--hx0), var(--hy0)) scale(1); } 25% { transform: translate(var(--hx0), var(--hy0)) scale(.85); } 60%, 70% { transform: translate(var(--hx1), var(--hy1)) scale(.85); } 85%, 100% { transform: translate(var(--hx1), var(--hy1)) scale(1); opacity: 0; } }
 
-/* Effects */
-.beam { position: absolute; border-radius: 999px; background: linear-gradient(90deg, rgba(255, 255, 255, 0), #fff 20%, #ffe28a 50%, #fff 80%, rgba(255, 255, 255, 0)); box-shadow: 0 0 16px #ffd34d, 0 0 30px rgba(255, 150, 40, .7); }
-.beam.h { height: 34%; animation: beamh .42s ease-out forwards; }
-.beam.v { width: 34%; background: linear-gradient(180deg, rgba(255, 255, 255, 0), #fff 20%, #ffe28a 50%, #fff 80%, rgba(255, 255, 255, 0)); animation: beamv .42s ease-out forwards; }
-.beam.cannon { box-shadow: 0 0 16px #ff8a3d, 0 0 34px rgba(210, 40, 40, .8); }
-@keyframes beamh { 0% { transform: scaleX(.05); opacity: 1; } 55% { transform: scaleX(1); opacity: 1; } 100% { transform: scaleX(1) scaleY(.2); opacity: 0; } }
-@keyframes beamv { 0% { transform: scaleY(.05); opacity: 1; } 55% { transform: scaleY(1); opacity: 1; } 100% { transform: scaleY(1) scaleX(.2); opacity: 0; } }
-.blast { position: absolute; border-radius: 50%; background: radial-gradient(circle, #fff 0 15%, #ffe28a 30%, #ff9a3d 55%, rgba(210, 50, 40, 0) 72%); animation: blast .5s ease-out forwards; }
-@keyframes blast { 0% { transform: scale(.2); opacity: 1; } 70% { opacity: .95; } 100% { transform: scale(1.15); opacity: 0; } }
-.flash { position: absolute; border-radius: 50%; background: radial-gradient(circle, rgba(255, 255, 255, .95), rgba(255, 226, 138, .6) 45%, rgba(255, 226, 138, 0) 70%); animation: flash .45s ease-out forwards; }
-@keyframes flash { 0% { transform: scale(.3); opacity: 1; } 100% { transform: scale(1.3); opacity: 0; } }
-.bell-lines { position: absolute; inset: 0; width: 100%; height: 100%; }
-.bell-lines line { stroke: #ffd34d; stroke-width: 4; stroke-linecap: round; filter: drop-shadow(0 0 3px #fff); animation: zap .5s ease-out forwards; }
-@keyframes zap { 0% { opacity: 1; stroke-dasharray: 0 400; } 50% { stroke-dasharray: 400 0; opacity: 1; } 100% { opacity: 0; } }
-.pts { position: absolute; z-index: 6; transform: translate(-50%, -50%); font-weight: 700; font-size: 1.15rem; color: #fff; white-space: nowrap; text-shadow: 0 0 3px var(--navy), 0 2px 0 var(--navy), 2px 0 0 var(--navy), -2px 0 0 var(--navy), 0 -2px 0 var(--navy); animation: rise .9s ease-out forwards; }
-@keyframes rise { 0% { opacity: 0; transform: translate(-50%, -30%) scale(.7); } 20% { opacity: 1; transform: translate(-50%, -60%) scale(1.1); } 100% { opacity: 0; transform: translate(-50%, -160%) scale(1); } }
-.spark { position: absolute; width: 8px; height: 8px; border-radius: 2px; animation: spark .8s ease-out forwards; }
-@keyframes spark { 0% { transform: translate(0, 0) rotate(0); opacity: 1; } 100% { transform: translate(var(--dx), var(--dy)) rotate(260deg); opacity: 0; } }
-
-.banner { position: absolute; left: 50%; top: 50%; z-index: 8; transform: translate(-50%, -50%); width: max-content; max-width: calc(100% - 2 * var(--gutter)); padding: .7rem 1.4rem; border-radius: 14px; background: var(--red); color: #fff; font-family: var(--serif); font-weight: 700; font-size: 1.5rem; text-align: center; box-shadow: 0 0 0 3px var(--gilt), 0 10px 24px rgba(0, 0, 0, .45); pointer-events: none; animation: bannerIn .35s cubic-bezier(.2, 1.4, .5, 1); }
-.banner small { display: block; font-family: var(--ui); font-weight: 400; font-size: .85rem; }
-@keyframes bannerIn { from { transform: translate(-50%, -50%) scale(.6); opacity: 0; } }
-.skip-note { position: absolute; bottom: .4rem; left: 0; right: 0; z-index: 8; text-align: center; font-size: .85rem; color: #fff; text-shadow: 0 1px 2px #000; pointer-events: none; }
-
-.bubble { position: absolute; left: var(--gutter); right: var(--gutter); bottom: .6rem; z-index: 9; display: grid; grid-template-columns: 3.4rem 1fr; gap: .7rem; align-items: start; padding: .75rem .85rem; border-radius: 16px; background: var(--vellum); color: var(--ink); box-shadow: 0 0 0 3px var(--gilt), 0 10px 24px rgba(0, 0, 0, .45); animation: bubbleIn .35s cubic-bezier(.2, 1.3, .5, 1); }
-.bubble.top { bottom: auto; top: .4rem; }
-.bubble svg.crier { width: 3.4rem; height: 3.4rem; }
-.bubble b { display: block; font-family: var(--serif); color: var(--red); font-size: 1rem; }
-.bubble p { font-size: .98rem; line-height: 1.4; }
-.bubble .btn { margin-top: .5rem; min-height: 2.6rem; padding: .4rem 1rem; font-size: .95rem; }
-.bubble .row { display: flex; gap: .5rem; flex-wrap: wrap; }
-@keyframes bubbleIn { from { transform: translateY(20px); opacity: 0; } }
-.bubble.nudge { animation: hit .35s ease; }
-
-/* ---------- Modals ---------- */
+/* Modals */
 #modal-root { position: absolute; inset: 0; z-index: 50; pointer-events: none; }
 .backdrop { position: absolute; inset: 0; display: grid; place-items: center; padding: var(--gutter); background: rgba(10, 16, 30, .62); pointer-events: auto; animation: fadeIn .2s ease; }
 @keyframes fadeIn { from { opacity: 0; } }
@@ -268,6 +125,7 @@ p { margin: 0; }
 .modal h2 { font-family: var(--serif); font-weight: 700; font-size: 1.55rem; line-height: 1.15; color: var(--navy); }
 .modal h2.display { font-family: var(--display); font-weight: 400; font-size: 2.1rem; }
 .modal .actions { display: flex; flex-direction: column; gap: .6rem; margin-top: .2rem; }
+.modal .ribbon-h { align-self: center; margin-top: -.2rem; padding: .3rem 1.6rem; background: var(--red); color: #fff; font-weight: 700; font-size: .85rem; letter-spacing: .14em; text-transform: uppercase; clip-path: polygon(0 0, 100% 0, 94% 50%, 100% 100%, 0 100%, 6% 50%); }
 .stars-big { display: flex; justify-content: center; gap: .4rem; align-items: flex-end; }
 .stars-big svg { width: 3.6rem; height: 3.6rem; color: #cdbb90; }
 .stars-big svg:nth-child(2) { width: 4.4rem; height: 4.4rem; }
@@ -280,14 +138,15 @@ p { margin: 0; }
 @keyframes fall { to { transform: translate(var(--dx), 110vh) rotate(720deg); } }
 
 @media (prefers-reduced-motion: reduce) {
-  .pc .rays, .pc.hint .ic, .moves.low .val, .pc.sp-row .ic, .pc.sp-col .ic, .pc.sp-keg .ic { animation: none; }
+  .pc .rays, .moves.low .val, .pc.sp-row .ic, .pc.sp-col .ic, .pc.sp-keg .ic { animation: none; }
   .board.shake { animation: none; }
   .confetti { display: none; }
 }
 </style>
+
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
   <defs>
-    <!-- ===== Game pieces (64 x 64) ===== -->
+    <!-- Game Pieces -->
     <symbol id="p-0" viewBox="0 0 64 64"><!-- Drum -->
       <path d="M8 22 V47 C8 52.5 18.7 57 32 57 C45.3 57 56 52.5 56 47 V22 Z" fill="#d7263d" stroke="#2b1a0e" stroke-width="3" stroke-linejoin="round"/>
       <path d="M12 30 V47 C12 49.5 14 51.5 17 52.8 V33 Z" fill="#ff8a98" opacity=".5"/>
@@ -339,7 +198,7 @@ p { margin: 0; }
       <path d="M14.5 21 C18.5 14 25 10 32 9.5" fill="none" stroke="#a9c4f7" stroke-width="3" stroke-linecap="round"/>
       <path d="M32 12 L37 26.1 L52 26.5 L40.1 35.6 L44.3 50 L32 41.5 L19.7 50 L23.9 35.6 L12 26.5 L27 26.1 Z" fill="#fffdf7" stroke="#0b1f4d" stroke-width="2.5" stroke-linejoin="round"/>
     </symbol>
-    <symbol id="p-bell" viewBox="0 0 64 64"><!-- Liberty Bell (special) -->
+    <symbol id="p-bell" viewBox="0 0 64 64"><!-- Liberty Bell -->
       <rect x="16" y="3" width="32" height="7" rx="2.5" fill="#7a4a1e" stroke="#2b1a0e" stroke-width="2.5"/>
       <rect x="29" y="9.5" width="6" height="5" fill="#5a3616"/>
       <path d="M20 14.5 C20 10 44 10 44 14.5 L46 38 C47 45 52 47.5 55 49.5 L55 54 L9 54 L9 49.5 C12 47.5 17 45 18 38 Z" fill="#c98b2b" stroke="#2b1a0e" stroke-width="3" stroke-linejoin="round"/>
@@ -361,25 +220,7 @@ p { margin: 0; }
         <circle cx="24" cy="-5.5" r="3.4" fill="#ffb020" stroke="#c2410c" stroke-width="1.2"/>
       </g>
     </symbol>
-
-    <!-- ===== The Town Crier, your guide ===== -->
-    <symbol id="crier" viewBox="0 0 64 64">
-      <circle cx="32" cy="32" r="31" fill="#e9d7ab" stroke="#86611a" stroke-width="2"/>
-      <path d="M9 64 C11 50 20 45 32 45 C44 45 53 50 55 64 Z" fill="#b22234" stroke="#2b1a0e" stroke-width="2"/>
-      <path d="M26 45.5 L32 54 L38 45.5" fill="#fbf5e6" stroke="#2b1a0e" stroke-width="1.6" stroke-linejoin="round"/>
-      <path d="M19.5 27 C18.5 34 17.5 38 20.5 41.5 M44.5 27 C45.5 34 46.5 38 43.5 41.5" fill="none" stroke="#f1eee7" stroke-width="5" stroke-linecap="round"/>
-      <circle cx="32" cy="33" r="12" fill="#f3c9a0" stroke="#2b1a0e" stroke-width="2"/>
-      <circle cx="27.5" cy="32" r="1.7" fill="#2b1a0e"/>
-      <circle cx="36.5" cy="32" r="1.7" fill="#2b1a0e"/>
-      <circle cx="23.8" cy="36" r="2.3" fill="#ee9a86" opacity=".7"/>
-      <circle cx="40.2" cy="36" r="2.3" fill="#ee9a86" opacity=".7"/>
-      <path d="M27 38 C29.5 40.5 34.5 40.5 37 38" fill="none" stroke="#2b1a0e" stroke-width="1.8" stroke-linecap="round"/>
-      <path d="M21 24 C21 13 43 13 43 24" fill="#3b3b48" stroke="#111" stroke-width="2"/>
-      <path d="M10 25 C19 19.5 25.5 22.5 32 22.5 C38.5 22.5 45 19.5 54 25 C50 29.5 41 29 32 31 C23 29 14 29.5 10 25 Z" fill="#22222c" stroke="#111" stroke-width="2" stroke-linejoin="round"/>
-      <path d="M11.5 25.5 C19.5 21 25.5 24 32 24 C38.5 24 44.5 21 52.5 25.5" fill="none" stroke="#e8b923" stroke-width="2"/>
-    </symbol>
-
-    <!-- ===== Interface icons (24 x 24) ===== -->
+    <!-- UI Icons -->
     <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2 L14.47 9.1 L21.99 9.26 L15.99 13.8 L18.17 20.99 L12 16.7 L5.83 20.99 L8.01 13.8 L2.01 9.26 L9.53 9.1 Z" fill="currentColor" stroke="rgba(0,0,0,.25)" stroke-width="1" stroke-linejoin="round"/></symbol>
     <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="i-hand" viewBox="0 0 64 64"><path d="M24 6c3.3 0 5.5 2.4 5.5 5.6V30l1.8-.8c1.6-5.3 10.7-4.8 10.9 1.3l.2 1.2c3-3.6 9.6-1.9 9.7 3l.2 1.1c3-2.3 8.1-.4 8.1 3.9v9.2C60.4 59 53 63 44 63h-6.5c-5.8 0-9.4-2.6-12.4-7.3L13.6 39.6c-1.9-3 .3-6.8 3.9-6.8 1.9 0 3.6 1 4.6 2.6l1.3 2V11.6C23.4 8.4 20.7 6 24 6z" fill="#fffdf7" stroke="#2b1a0e" stroke-width="3" stroke-linejoin="round"/></symbol>
@@ -387,25 +228,9 @@ p { margin: 0; }
 </svg>
 
 <div id="app">
-  <!-- ===== Title: a broadside ===== -->
-  <section id="scr-title" class="screen parchment">
-    <div id="bunting"></div>
-    <div class="broadside">
-      <div class="bs-small">In Congress, July 4, 1776.</div>
-      <div class="bs-rule"></div>
-      <div class="bs-mid">A Matching Game for the</div>
-      <div class="bs-states">Thirteen United States of America</div>
-      <h1 class="bs-title">Liberty<br><span class="red">Match</span></h1>
-      <div class="bs-year"><svg aria-hidden="true"><use href="#i-star"/></svg>1776<svg aria-hidden="true"><use href="#i-star"/></svg></div>
-      <div class="title-flag" id="title-flag"></div>
-      <button class="seal-btn" id="enter-btn" data-action="enter" aria-label="Play" style="margin-top:20px;"><svg id="seal-svg" viewBox="0 0 100 100" aria-hidden="true"></svg><span>Play</span></button>
-    </div>
-  </section>
-
-  <!-- ===== Game ===== -->
-  <section id="scr-game" class="screen" hidden>
+  <section id="scr-game" class="screen">
     <div class="gtop">
-      <div class="gtitle"><span class="lv" id="g-lv">Level 1</span><span class="nm" id="g-nm"></span></div>
+      <div class="gtitle"><span class="lv" id="g-lv">Level 1</span><span class="nm" id="g-nm">The Stamp Act</span></div>
     </div>
     <div class="hud">
       <div class="hud-box moves" id="hud-moves"><span class="lbl">Moves</span><span class="val" id="hud-moves-n">0</span></div>
@@ -422,19 +247,16 @@ p { margin: 0; }
         <div class="fx" id="fx"></div>
       </div>
     </div>
-    <div id="bubble-slot"></div>
   </section>
-
   <div id="modal-root"></div>
 </div>
 
 <script>
 /* ==========================================================
-   Liberty Match 1776 · Game engine
+   Liberty Match 1776 · Engine
    ========================================================== */
 (function (root) {
   'use strict';
-
   function RNG(seed) { this.s = (seed >>> 0) || 1; }
   RNG.prototype.next = function () {
     this.s = (this.s + 0x6D2B79F5) >>> 0;
@@ -444,11 +266,8 @@ p { margin: 0; }
     return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
   };
   RNG.prototype.int = function (n) { return Math.floor(this.next() * n); };
-  RNG.prototype.clone = function () { const r = new RNG(1); r.s = this.s; return r; };
 
-  const PIECE_PTS = 20;
-  const CREATE_BONUS = { row: 60, col: 60, keg: 90, bell: 150 };
-  const FIRE_BONUS = { cross: 60, bigcross: 120, bigkeg: 120, all: 300 };
+  const PIECE_PTS = 20, CREATE_BONUS = { row: 60, col: 60, keg: 90, bell: 150 }, FIRE_BONUS = { cross: 60, bigcross: 120, bigkeg: 120, all: 300 };
 
   function decideSpecial(g) {
     let maxLen = 0, hasH = false, hasV = false;
@@ -465,42 +284,32 @@ p { margin: 0; }
     return null;
   }
 
-  function Game(level, opts) {
-    opts = opts || {};
+  function Game(level) {
     this.L = level;
     this.rows = level.rows || 7;
     this.cols = level.cols || 7;
     this.n = this.rows * this.cols;
     this.types = level.types || 5;
-    this.rng = new RNG(opts.seed != null ? opts.seed : (Math.random() * 4294967296) >>> 0);
+    this.rng = new RNG((Math.random() * 4294967296) >>> 0);
     this.nextId = 1;
     this.cells = new Array(this.n).fill(null);
-    this.seals = new Array(this.n).fill(0);
     this.moves = level.moves;
-    this.movesUsed = 0;
     this.score = 0;
     this.state = 'play';
     this.goals = level.goals.map(g => Object.assign({}, g, { got: 0 }));
-    this.stats = { made: { row: 0, col: 0, keg: 0, bell: 0 }, fired: {}, cascades: 0, shuffles: 0 };
-    this._setup();
+    
+    let tries = 0;
+    do {
+      this._fillFresh();
+      tries++;
+    } while (tries < 300 && (this.findGroups().length || this.findMoves().length < 3));
+    if (!this.findMoves(1).length) this._shuffle(null);
   }
 
   const G = Game.prototype;
-
   G.rc = function (i) { return [(i / this.cols) | 0, i % this.cols]; };
   G.idx = function (r, c) { return r * this.cols + c; };
-  G.color = function (i) {
-    const c = this.cells[i];
-    return (c && c.k === 'p' && c.s !== 'bell') ? c.t : -1;
-  };
-  G._nbrs = function (i) {
-    const C = this.cols, R = this.rows, r = (i / C) | 0, c = i % C, out = [];
-    if (r > 0) out.push(i - C);
-    if (r < R - 1) out.push(i + C);
-    if (c > 0) out.push(i - 1);
-    if (c < C - 1) out.push(i + 1);
-    return out;
-  };
+  G.color = function (i) { const c = this.cells[i]; return (c && c.k === 'p' && c.s !== 'bell') ? c.t : -1; };
   G.adjacent = function (a, b) {
     if (a < 0 || b < 0 || a >= this.n || b >= this.n) return false;
     const [ra, ca] = this.rc(a), [rb, cb] = this.rc(b);
@@ -518,27 +327,14 @@ p { margin: 0; }
     return best;
   };
 
-  G._setup = function () {
-    const L = this.L;
-    let tries = 0;
-    do {
-      this._fillFresh();
-      tries++;
-    } while (tries < 300 && (this.findGroups().length || this.findMoves().length < 3));
-    if (!this.findMoves(1).length) this._shuffle(null);
-  };
-
   G._fillFresh = function () {
     const R = this.rows, C = this.cols;
     for (let r = 0; r < R; r++) {
       for (let c = 0; c < C; c++) {
         const i = this.idx(r, c);
-        let t;
-        let tries = 0;
+        let t, tries = 0;
         do { t = this.rng.int(this.types); tries++; }
-        while (tries < 40 && (
-          (c >= 2 && this.color(i - 1) === t && this.color(i - 2) === t) ||
-          (r >= 2 && this.color(i - C) === t && this.color(i - 2 * C) === t)));
+        while (tries < 40 && ((c >= 2 && this.color(i - 1) === t && this.color(i - 2) === t) || (r >= 2 && this.color(i - C) === t && this.color(i - 2 * C) === t)));
         this.cells[i] = { id: this.nextId++, k: 'p', t: t, s: null };
       }
     }
@@ -553,8 +349,7 @@ p { margin: 0; }
         let e = c + 1;
         if (t >= 0) while (e < C && this.color(r * C + e) === t) e++;
         if (t >= 0 && e - c >= 3) {
-          const cells = [];
-          for (let k = c; k < e; k++) cells.push(r * C + k);
+          const cells = []; for (let k = c; k < e; k++) cells.push(r * C + k);
           runs.push({ dir: 'h', t: t, cells: cells });
         }
         c = e;
@@ -567,8 +362,7 @@ p { margin: 0; }
         let e = r + 1;
         if (t >= 0) while (e < R && this.color(e * C + c) === t) e++;
         if (t >= 0 && e - r >= 3) {
-          const cells = [];
-          for (let k = r; k < e; k++) cells.push(k * C + c);
+          const cells = []; for (let k = r; k < e; k++) cells.push(k * C + c);
           runs.push({ dir: 'v', t: t, cells: cells });
         }
         r = e;
@@ -584,18 +378,14 @@ p { margin: 0; }
     const find = i => { while (parent[i] !== i) { parent[i] = parent[parent[i]]; i = parent[i]; } return i; };
     const owner = new Map();
     runs.forEach((run, i) => run.cells.forEach(ci => {
-      if (owner.has(ci)) {
-        const a = find(owner.get(ci)), b = find(i);
-        if (a !== b) parent[a] = b;
-      } else owner.set(ci, i);
+      if (owner.has(ci)) { const a = find(owner.get(ci)), b = find(i); if (a !== b) parent[a] = b; } else owner.set(ci, i);
     }));
     const map = new Map();
     runs.forEach((run, i) => {
       const rt = find(i);
       let g = map.get(rt);
       if (!g) { g = { t: run.t, runs: [], cells: new Set() }; map.set(rt, g); }
-      g.runs.push(run);
-      run.cells.forEach(ci => g.cells.add(ci));
+      g.runs.push(run); run.cells.forEach(ci => g.cells.add(ci));
     });
     return Array.from(map.values());
   };
@@ -651,14 +441,7 @@ p { margin: 0; }
     if (la.h >= 3 || la.v >= 3 || lb.h >= 3 || lb.v >= 3) moves.push({ a: a, b: b });
   };
 
-  G._goalColors = function () {
-    const s = new Set();
-    for (const g of this.goals) if (g.kind === 'collect' && g.got < g.n) s.add(g.t);
-    return s;
-  };
-
   G.rateMove = function (m) {
-    const goalColors = this._goalColors();
     const A = this.cells[m.a], B = this.cells[m.b];
     if (m.special) {
       const sa = A.k === 'p' ? A.s : null, sb = B.k === 'p' ? B.s : null;
@@ -678,7 +461,6 @@ p { margin: 0; }
       if (h >= 5 || vv >= 5) n += 12;
       else if (h >= 3 && vv >= 3) n += 8;
       else if (h === 4 || vv === 4) n += 5;
-      if (goalColors.has(L.t)) n += 2 * (h + vv);
       v += n;
     }
     this.cells[m.a] = A; this.cells[m.b] = B;
@@ -714,22 +496,17 @@ p { margin: 0; }
   G.bestMove = function () {
     const moves = this.findMoves();
     let best = null, bv = -Infinity;
-    for (const m of moves) {
-      const v = this.rateMove(m);
-      if (v > bv) { bv = v; best = m; }
-    }
+    for (const m of moves) { const v = this.rateMove(m); if (v > bv) { bv = v; best = m; } }
     return best;
   };
 
   G.snapshot = function () {
     return {
       cells: this.cells.map(c => c ? { id: c.id, k: c.k, t: c.t, s: c.s, hp: c.hp } : null),
-      seals: this.seals.slice(),
-      score: this.score,
-      moves: this.moves,
-      goals: this.goals.map(g => ({ kind: g.kind, t: g.t, n: g.n, got: g.got }))
+      score: this.score, moves: this.moves, goals: this.goals.map(g => ({ kind: g.kind, t: g.t, n: g.n, got: g.got }))
     };
   };
+
   G._phase = function (out, kind, extra) {
     if (!out) return;
     const p = Object.assign({ kind: kind }, extra || {});
@@ -741,9 +518,7 @@ p { margin: 0; }
     if (t == null || t < 0) return;
     for (const g of this.goals) if (g.kind === 'collect' && g.t === t && g.got < g.n) g.got++;
   };
-  G._goal = function (kind, k) {
-    for (const g of this.goals) if (g.kind === kind) g.got = Math.min(g.n, g.got + k);
-  };
+  
   G.goalsDone = function () { return this.goals.every(g => g.got >= g.n); };
 
   G._targets = function (kind, i, color) {
@@ -755,9 +530,7 @@ p { margin: 0; }
       case 'keg': for (let dr = -1; dr <= 1; dr++) for (let dc = -1; dc <= 1; dc++) add(r + dr, c + dc); break;
       case 'bigkeg': for (let dr = -2; dr <= 2; dr++) for (let dc = -2; dc <= 2; dc++) add(r + dr, c + dc); break;
       case 'cross': for (let k = 0; k < C; k++) add(r, k); for (let k = 0; k < R; k++) add(k, c); break;
-      case 'bigcross':
-        for (let d = -1; d <= 1; d++) { for (let k = 0; k < C; k++) add(r + d, k); for (let k = 0; k < R; k++) add(k, c + d); }
-        break;
+      case 'bigcross': for (let d = -1; d <= 1; d++) { for (let k = 0; k < C; k++) add(r + d, k); for (let k = 0; k < R; k++) add(k, c + d); } break;
       case 'bell': for (let k = 0; k < this.n; k++) if (this.color(k) === color) out.add(k); break;
       case 'all': for (let k = 0; k < this.n; k++) out.add(k); break;
     }
@@ -771,32 +544,26 @@ p { margin: 0; }
       const t = this.color(i);
       if (t >= 0) cnt[t]++;
     }
-    const goalColors = this._goalColors();
     let best = -1, bn = 0;
-    for (let t = 0; t < this.types; t++) {
-      const score = cnt[t] + (goalColors.has(t) && cnt[t] > 0 ? 100 : 0);
-      if (score > bn) { bn = score; best = t; }
-    }
+    for (let t = 0; t < this.types; t++) { if (cnt[t] > bn) { bn = cnt[t]; best = t; } }
     return best;
   };
 
   G._hit = function (t, x) {
     if (x.protect.has(t)) return 0;
     const c = this.cells[t];
-    if (!c) return 0;
-    if (c.k !== 'p') return 0;
+    if (!c || c.k !== 'p') return 0;
     x.toClear.add(t);
     if (c.s && !x.activated.has(t)) x.queue.push({ i: t });
     return 1;
   };
 
   G._clearPhase = function (out, o) {
-    const mult = o.mult || 1;
-    const toClear = new Set(), counted = new Set();
+    const mult = o.mult || 1, toClear = new Set(), counted = new Set();
     const protect = new Set(), activated = new Set();
     const created = [], fx = [], queue = [];
     let pts = 0;
-    const ctx = { toClear, queue, activated, protect, hitCrate: () => {} };
+    const ctx = { toClear, queue, activated, protect };
 
     if (o.groups) {
       for (const g of o.groups) {
@@ -804,21 +571,14 @@ p { margin: 0; }
         let place = -1;
         if (sp) {
           place = this._placeCell(g, sp, o.prefer || []);
-          const cur = this.cells[place];
-          const keep = !!(cur && cur.k === 'p' && !cur.s);
+          const cur = this.cells[place], keep = !!(cur && cur.k === 'p' && !cur.s);
           created.push({ i: place, t: sp === 'bell' ? -1 : g.t, s: sp, keep: keep });
           if (keep) protect.add(place);
           pts += CREATE_BONUS[sp];
-          this.stats.made[sp]++;
         }
-        g.cells.forEach(ci => {
-          if (!protect.has(ci)) toClear.add(ci);
-          this._collect(g.t);
-          counted.add(ci);
-        });
+        g.cells.forEach(ci => { if (!protect.has(ci)) toClear.add(ci); this._collect(g.t); counted.add(ci); });
         const cells = Array.from(g.cells);
-        fx.push({ fx: 'match', cells: cells, t: g.t, at: place >= 0 ? place : this._center(cells),
-          pts: cells.length * PIECE_PTS * mult + (sp ? CREATE_BONUS[sp] : 0), special: sp });
+        fx.push({ fx: 'match', cells: cells, t: g.t, at: place >= 0 ? place : this._center(cells), pts: cells.length * PIECE_PTS * mult + (sp ? CREATE_BONUS[sp] : 0), special: sp });
       }
       pts += protect.size * PIECE_PTS * mult;
     }
@@ -827,19 +587,12 @@ p { margin: 0; }
     if (o.consumed) for (const i of o.consumed) { activated.add(i); toClear.add(i); }
     if (o.seeds) for (const s of o.seeds) queue.push(s);
     if (o.fx) fx.push(o.fx);
-    toClear.forEach(ci => {
-      const c = this.cells[ci];
-      if (c && c.k === 'p' && c.s && !activated.has(ci)) queue.push({ i: ci });
-    });
+    toClear.forEach(ci => { const c = this.cells[ci]; if (c && c.k === 'p' && c.s && !activated.has(ci)) queue.push({ i: ci }); });
 
     let guard = 0;
     while (queue.length && guard++ < 1000) {
-      const sd = queue.shift();
-      const i = sd.i, c = this.cells[i];
-      if (!sd.force) {
-        if (activated.has(i)) continue;
-        if (!c || c.k !== 'p' || !c.s) continue;
-      }
+      const sd = queue.shift(), i = sd.i, c = this.cells[i];
+      if (!sd.force) { if (activated.has(i)) continue; if (!c || c.k !== 'p' || !c.s) continue; }
       const kind = sd.as || (c && c.k === 'p' ? c.s : null);
       if (!kind) continue;
       activated.add(i);
@@ -851,7 +604,6 @@ p { margin: 0; }
       for (const t of targets) { if (t !== i) hitN += this._hit(t, ctx); }
       fx.push({ fx: kind, at: i, cells: targets, color: color, pts: hitN * PIECE_PTS * mult + (FIRE_BONUS[kind] || 0) });
       pts += FIRE_BONUS[kind] || 0;
-      this.stats.fired[kind] = (this.stats.fired[kind] || 0) + 1;
     }
 
     const removed = [];
@@ -869,23 +621,19 @@ p { margin: 0; }
     for (const cr of created) {
       const cur = this.cells[cr.i];
       if (cr.keep && cur && cur.k === 'p') {
-        cur.s = cr.s; cur.t = cr.t;
-        made.push({ id: cur.id, i: cr.i, s: cr.s, t: cr.t });
+        cur.s = cr.s; cur.t = cr.t; made.push({ id: cur.id, i: cr.i, s: cr.s, t: cr.t });
       } else {
         const p = { id: this.nextId++, k: 'p', t: cr.t, s: cr.s };
-        this.cells[cr.i] = p;
-        made.push({ id: p.id, i: cr.i, s: cr.s, t: cr.t, fresh: true });
+        this.cells[cr.i] = p; made.push({ id: p.id, i: cr.i, s: cr.s, t: cr.t, fresh: true });
       }
     }
 
     this.score += pts;
-    this._phase(out, 'clear', { removed: removed, made: made, sealsHit: [], cratesHit: [], fx: fx, pts: pts, mult: mult });
+    this._phase(out, 'clear', { removed: removed, made: made, fx: fx, pts: pts, mult: mult });
     return removed.length + made.length;
   };
 
-  G._spawn = function () {
-    return { id: this.nextId++, k: 'p', t: this.rng.int(this.types), s: null };
-  };
+  G._spawn = function () { return { id: this.nextId++, k: 'p', t: this.rng.int(this.types), s: null }; };
 
   G._gravity = function (out) {
     const R = this.rows, C = this.cols, moves = [], spawns = [];
@@ -895,21 +643,14 @@ p { margin: 0; }
       for (let r = R - 1; r >= 0; r--) {
         const i = r * C + c, cell = this.cells[i];
         if (cell) {
-          if (r !== w) {
-            this.cells[w * C + c] = cell;
-            this.cells[i] = null;
-            moves.push({ id: cell.id, from: i, to: w * C + c });
-            any = true;
-          }
+          if (r !== w) { this.cells[w * C + c] = cell; this.cells[i] = null; moves.push({ id: cell.id, from: i, to: w * C + c }); any = true; }
           w--;
         }
       }
       const empties = w + 1;
       for (let r = w; r >= 0; r--) {
         const cell = this._spawn();
-        this.cells[r * C + c] = cell;
-        spawns.push({ id: cell.id, to: r * C + c, fromRow: r - empties });
-        any = true;
+        this.cells[r * C + c] = cell; spawns.push({ id: cell.id, to: r * C + c, fromRow: r - empties }); any = true;
       }
     }
     if (any) this._phase(out, 'fall', { moves: moves, spawns: spawns });
@@ -921,10 +662,7 @@ p { margin: 0; }
       this._gravity(out);
       const groups = this.findGroups();
       if (groups.length) {
-        mult++;
-        this.stats.cascades++;
-        this._clearPhase(out, { groups: groups, mult: Math.min(mult, 8) });
-        continue;
+        mult++; this._clearPhase(out, { groups: groups, mult: Math.min(mult, 8) }); continue;
       }
       break;
     }
@@ -941,9 +679,7 @@ p { margin: 0; }
     for (let i = 0; i < this.n; i++) { const c = this.cells[i]; if (c && c.k === 'p') idxs.push(i); }
     const pieces = idxs.map(i => this.cells[i]);
     for (let attempt = 0; attempt < 400; attempt++) {
-      if (attempt > 0 && attempt % 40 === 0) {
-        for (const p of pieces) if (!p.s) p.t = this.rng.int(this.types);
-      }
+      if (attempt > 0 && attempt % 40 === 0) { for (const p of pieces) if (!p.s) p.t = this.rng.int(this.types); }
       for (let k = pieces.length - 1; k > 0; k--) {
         const j = this.rng.int(k + 1);
         const tmp = pieces[k]; pieces[k] = pieces[j]; pieces[j] = tmp;
@@ -951,39 +687,38 @@ p { margin: 0; }
       idxs.forEach((i, k) => { this.cells[i] = pieces[k]; });
       if (!this.findGroups().length && this.findMoves(1).length) break;
     }
-    this.stats.shuffles++;
     this._phase(out, 'shuffle', {});
   };
 
   G.trySwap = function (a, b) {
-    const out = this.record ? [] : null;
+    const out = []; // Fixed: Always instantiate array so visual animations fire
     if (this.state !== 'play' || this.moves <= 0) return { ok: false, reason: 'over', phases: out };
     if (!this.adjacent(a, b)) return { ok: false, reason: 'far', phases: out };
     const A = this.cells[a], B = this.cells[b];
     if (!A || !B) return { ok: false, reason: 'blocked', phases: out };
+    
     const aSp = A.k === 'p' && A.s, bSp = B.k === 'p' && B.s;
     this.cells[a] = B; this.cells[b] = A;
+    
     if (aSp || bSp) {
       this._phase(out, 'swap', { a: a, b: b });
-      this._useMove();
+      this.moves--;
       this._specialSwap(out, a, b);
     } else {
       const groups = this.findGroups();
       if (!groups.length) {
         this.cells[a] = A; this.cells[b] = B;
-        if (out) out.push({ kind: 'swapBack', a: a, b: b, snap: this.snapshot() });
+        out.push({ kind: 'swapBack', a: a, b: b, snap: this.snapshot() });
         return { ok: false, reason: 'nomatch', phases: out };
       }
       this._phase(out, 'swap', { a: a, b: b });
-      this._useMove();
+      this.moves--;
       this._clearPhase(out, { groups: groups, prefer: [b, a], mult: 1 });
       this._settle(out, 1);
     }
     this._afterTurn(out);
     return { ok: true, phases: out };
   };
-
-  G._useMove = function () { this.moves--; this.movesUsed++; };
 
   G._specialSwap = function (out, a, b) {
     const P = this.cells[b], Q = this.cells[a];
@@ -1026,16 +761,8 @@ p { margin: 0; }
     this._settle(out, 1);
   };
 
-  G.addMoves = function (k) {
-    this.moves += k;
-    if (this.state === 'lost') this.state = 'play';
-    const out = this.record ? [] : null;
-    if (!this.findMoves(1).length) this._shuffle(out);
-    return out;
-  };
-
   G.celebrate = function () {
-    const out = this.record ? [] : null;
+    const out = [];
     const left = this.moves;
     if (left > 0) {
       const cand = [];
@@ -1062,17 +789,18 @@ p { margin: 0; }
     return 1 + (score >= s[1] ? 1 : 0) + (score >= s[2] ? 1 : 0);
   };
 
-  const Engine = { Game: Game, RNG: RNG, decideSpecial: decideSpecial };
-  if (typeof module !== 'undefined' && module.exports) module.exports = Engine;
-  else root.Engine = Engine;
+  root.Engine = { Game: Game, RNG: RNG, decideSpecial: decideSpecial };
 })(typeof window !== 'undefined' ? window : this);
 </script>
+
 <script>
 /* ==========================================================
-   Liberty Match 1776 · Level 1 Configuration Only
+   Liberty Match 1776 · App Controls
    ========================================================== */
-(function (root) {
+(function () {
   'use strict';
+  const Engine = window.Engine;
+  
   const PIECES = [
     { name: 'Drum', plural: 'Drums' },
     { name: 'Lantern', plural: 'Lanterns' },
@@ -1082,32 +810,11 @@ p { margin: 0; }
     { name: 'Quill', plural: 'Quills' }
   ];
 
-  const LEVELS = [
-    {
-      id: 1, date: 'March 1765', title: 'The Stamp Act',
-      types: 5, moves: 20,
-      goals: [{ kind: 'collect', t: 0, n: 12 }],
-      stars: [0, 4800, 7000],
-      intro: 'Parliament taxes every newspaper, deed, and deck of cards in the colonies. Beat the drums of protest!',
-      fact: 'The Stamp Act taxed printed paper in the colonies, from newspapers and legal papers to playing cards. The colonists protested so loudly that Parliament repealed it in 1766.',
-      quote: { text: 'No taxation without representation!', by: 'Popular slogan of the Revolutionary era' }
-    }
-  ];
-
-  const Content = { PIECES: PIECES, LEVELS: LEVELS };
-  if (typeof module !== 'undefined' && module.exports) module.exports = Content;
-  else root.Content = Content;
-})(typeof window !== 'undefined' ? window : this);
-</script>
-<script>
-/* ==========================================================
-   Liberty Match 1776 · App
-   ========================================================== */
-(function () {
-  'use strict';
-  const Engine = window.Engine;
-  const LEVELS = window.Content.LEVELS;
-  const PIECES = window.Content.PIECES;
+  const LEVEL_1 = {
+    id: 1, date: 'March 1765', title: 'The Stamp Act',
+    types: 5, moves: 20, goals: [{ kind: 'collect', t: 0, n: 12 }],
+    stars: [0, 4800, 7000]
+  };
 
   const $ = (s, r) => (r || document).querySelector(s);
   const $$ = (s, r) => Array.from((r || document).querySelectorAll(s));
@@ -1116,51 +823,9 @@ p { margin: 0; }
   const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const ico = (id, cls) => '<svg' + (cls ? ' class="' + cls + '"' : '') + ' aria-hidden="true"><use href="#' + id + '"/></svg>';
   const REDUCED = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
-  const Sound = {
-    unlock() {}, click() {}, select() {}, swap() {}, bad() {}, pop() {}, made() {}, rocket() {}, boom() {}, bell() {}, seal() {}, crate() {}, deliver() {}, coin() {}, star() {}, shuffle() {}, gavel() {}, drumroll() {}, fanfare() {}, lose() {}
-  };
 
   function goalIconId(g) { return 'p-' + g.t; }
-  function goalText(g) { return 'Collect ' + g.n + ' ' + (g.n === 1 ? PIECES[g.t].name : PIECES[g.t].plural); }
-
-  function flagSVG(lit) {
-    const sh = 100 / 13;
-    let s = '<svg viewBox="0 0 190 100" role="img" aria-label="Flag">';
-    for (let i = 0; i < 13; i++) s += '<rect x="0" y="' + (i * sh).toFixed(2) + '" width="190" height="' + (sh + 0.4).toFixed(2) + '" fill="' + (i % 2 ? '#fffdf7' : '#b22234') + '"/>';
-    const ch = sh * 7;
-    s += '<rect width="76" height="' + ch.toFixed(2) + '" fill="#1c2b4b"/>';
-    const cx = 38, cy = ch / 2, rr = ch * 0.34;
-    for (let k = 0; k < 13; k++) {
-      const a = -Math.PI / 2 + k * 2 * Math.PI / 13, x = cx + rr * Math.cos(a), y = cy + rr * Math.sin(a), on = k < lit;
-      s += '<polygon points="' + (function(cx,cy,R,r){const p=[];for(let k=0;k<10;k++){const a=-Math.PI/2+k*Math.PI/5,rad=k%2?r:R;p.push((cx+rad*Math.cos(a)).toFixed(2)+','+(cy+rad*Math.sin(a)).toFixed(2));}return p.join(' ');})(x,y,3.9,1.6) + '" fill="' + (on ? '#fffdf7' : 'none') + '" stroke="' + (on ? '#fffdf7' : 'rgba(255,253,247,.4)') + '" stroke-width="' + (on ? 0.5 : 0.7) + '"/>';
-    }
-    return s + '</svg>';
-  }
-  function buntingSVG() {
-    let s = '<svg class="bunting" viewBox="0 0 390 66" preserveAspectRatio="xMidYMin meet" aria-hidden="true">';
-    [65, 195, 325].forEach(x => {
-      s += '<g transform="translate(' + x + ' 0)">';
-      [[62, '#b22234'], [46, '#fffdf7'], [30, '#1c2b4b']].forEach(b => { s += '<path d="M' + (-b[0]) + ' 0 A' + b[0] + ' ' + b[0] + ' 0 0 0 ' + b[0] + ' 0 Z" fill="' + b[1] + '"/>'; });
-      s += '</g>';
-    });
-    return s + '<path d="M0 1.5 H390" stroke="#86611a" stroke-width="3"/></svg>';
-  }
-  function sealSVG() {
-    let d = '';
-    for (let i = 0; i <= 90; i++) {
-      const a = i / 90 * Math.PI * 2, r = 46 + 2.4 * Math.sin(a * 9) + 1.3 * Math.sin(a * 23 + 1);
-      d += (i ? 'L' : 'M') + (50 + r * Math.cos(a)).toFixed(2) + ' ' + (50 + r * Math.sin(a)).toFixed(2);
-    }
-    return '<path d="' + d + 'Z" fill="#a51d2f" stroke="#6b1220" stroke-width="2"/>' +
-      '<circle cx="50" cy="50" r="36" fill="#bf2a3d" stroke="#8f1a29" stroke-width="2"/>' +
-      '<circle cx="50" cy="50" r="31" fill="none" stroke="#e8707e" stroke-width="1.5" stroke-dasharray="2.5 3"/>' +
-      '<path d="M24 31 C29.5 25 36 22 44 21.5" fill="none" stroke="#ec8a96" stroke-width="3" stroke-linecap="round" opacity=".75"/>';
-  }
-
-  function showScreen(name) {
-    ['title', 'game'].forEach(id => { $('#scr-' + id).hidden = id !== name; });
-  }
-
+  
   function confetti() {
     if (REDUCED) return;
     const box = document.createElement('div');
@@ -1182,33 +847,33 @@ p { margin: 0; }
     back.innerHTML = '<div class="modal ' + (o.cls || '') + '" role="dialog" aria-modal="true">' + o.html + '</div>';
     modalRoot().appendChild(back);
     const modal = back.firstElementChild;
-    const api = {
-      el: modal,
-      close() { back.remove(); }
-    };
+    const api = { el: modal, close() { back.remove(); } };
     back.addEventListener('click', e => {
       const t = e.target.closest('[data-act]');
       if (t && modal.contains(t)) {
-        const fn = o.actions && o.actions[t.dataset.act];
-        if (fn) fn(t, api, e);
-        return;
+        if (o.actions && o.actions[t.dataset.act]) o.actions[t.dataset.act](t, api, e);
       }
-      if (e.target === back && o.dismiss) api.close();
     });
     return api;
   }
 
-  function openWin(L, r) {
+  function openWin(r) {
     let stars = '';
     for (let i = 0; i < 3; i++) stars += '<svg class="' + (i < r.stars ? 'on' : '') + '" aria-hidden="true"><use href="#i-star"/></svg>';
     const html = '<div class="ribbon-h">Level 1 complete</div><h2 class="display">Huzzah!</h2>' +
       '<div class="stars-big" role="img" aria-label="' + r.stars + ' of 3 stars">' + stars + '</div>' +
       '<p class="lead" style="text-align:center; font-weight:bold; color:var(--red); font-size:1.15rem; margin-top:1rem;">Congratulations! Level 1 is complete! To keep playing, chip in to help House Republicans Below!</p>' +
       '<div class="actions"><button class="btn btn-red btn-xl" data-act="donate">Chip In Now</button></div>';
+    
     openModal({
       html: html,
-      dismiss: false,
-      actions: { donate: (t, m) => { window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' }); } }
+      actions: { 
+        donate: (t, m) => {
+          m.close();
+          // Message parent iframe to scroll to form
+          try { window.parent.postMessage({ action: 'scrollToDonate' }, '*'); } catch(e) {}
+        }
+      }
     });
     confetti();
   }
@@ -1233,18 +898,15 @@ p { margin: 0; }
       this.tilesEl = $('#tiles');
       this.fxEl = $('#fx');
       this.bindInput();
-      window.addEventListener('resize', () => { if (this.g && !$('#scr-game').hidden) this.layout(true); });
+      window.addEventListener('resize', () => { if (this.g) this.layout(true); });
     },
     T(ms) { return this.skip ? Math.min(ms, 10) : ms; },
 
-    start(id) {
-      const L = LEVELS[id - 1];
-      this.L = L;
-      this.g = new Engine.Game(L);
+    start() {
+      this.L = LEVEL_1;
+      this.g = new Engine.Game(this.L);
       this.sel = -1; this.tut = null; this.busy = false; this.badSwaps = 0;
-      $('#g-nm').textContent = L.title;
-      this.boardEl.classList.remove('tut');
-      showScreen('game');
+      $('#scr-game').hidden = false;
       this.layout(false);
       this.renderPieces();
       this.hud(this.g.snapshot(), true);
@@ -1299,9 +961,9 @@ p { margin: 0; }
       return rec;
     },
     recAt(i) { for (const rec of this.els.values()) if (rec.cell === i) return rec; return null; },
-    moveEl(rec, i, dur, easing) {
+    moveEl(rec, i, dur) {
       const p = this.xy(i);
-      rec.el.style.transition = dur ? 'transform ' + dur + 'ms ' + (easing || 'ease-in-out') : 'none';
+      rec.el.style.transition = dur ? 'transform ' + dur + 'ms ease-in-out' : 'none';
       rec.el.style.transform = 'translate3d(' + p[0] + 'px,' + p[1] + 'px,0)';
     },
     sync(snap, opts) {
@@ -1323,7 +985,7 @@ p { margin: 0; }
         if (rec.cell !== i) {
           const d = this.dist(rec.cell, i);
           const t = opts.dur != null ? opts.dur : this.T(110 + 60 * d);
-          this.moveEl(rec, i, t, opts.dur != null ? 'ease-in-out' : 'cubic-bezier(.45,.05,.6,1.08)');
+          this.moveEl(rec, i, t);
           rec.cell = i;
           maxT = Math.max(maxT, t);
         }
@@ -1332,7 +994,7 @@ p { margin: 0; }
         void this.piecesEl.offsetWidth;
         fresh.forEach(f => {
           const t = this.T(110 + 60 * f.d);
-          this.moveEl(f.rec, f.i, t, 'cubic-bezier(.45,.05,.6,1.08)');
+          this.moveEl(f.rec, f.i, t);
           maxT = Math.max(maxT, t);
         });
       }
@@ -1342,9 +1004,8 @@ p { margin: 0; }
 
     hud(snap, first) {
       const L = this.L;
-      const mv = snap.moves;
-      $('#hud-moves-n').textContent = mv;
-      this.displayMoves = mv;
+      $('#hud-moves-n').textContent = snap.moves;
+      this.displayMoves = snap.moves;
       $('#score-n').textContent = fmt(snap.score);
       const max = L.stars[2] * 1.12;
       $('#sb-fill').style.width = Math.min(100, snap.score / max * 100).toFixed(1) + '%';
@@ -1429,18 +1090,22 @@ p { margin: 0; }
       if (this.busy || !this.g || this.g.state !== 'play') return;
       if (this.tut && !((a === this.tut.a && b === this.tut.b) || (a === this.tut.b && b === this.tut.a))) return;
       const res = this.g.trySwap(a, b);
+      
       if (!res.ok) {
         if (res.reason === 'nomatch') {
           this.busy = true; await this.play(res.phases); this.busy = false;
         }
         return;
       }
+      
       this.busy = true;
       if (this.tut) this.endTutorialPointer();
       await this.play(res.phases);
       this.busy = false;
+      
       if (!this.g) return;
       if (this.g.state === 'won') return this.win();
+      if (this.g.state === 'lost') return this.outOfMoves();
     },
 
     async play(phases) {
@@ -1468,8 +1133,7 @@ p { margin: 0; }
       let maxDelay = 0;
       ph.removed.forEach(r => {
         const rec = this.els.get(r.id);
-        if (!rec) return;
-        rec.el.classList.add('pop');
+        if (rec) rec.el.classList.add('pop');
       });
       await wait(this.T(250) + maxDelay);
       ph.removed.forEach(r => { const rec = this.els.get(r.id); if (rec) { rec.el.remove(); this.els.delete(r.id); } });
@@ -1507,8 +1171,7 @@ p { margin: 0; }
       this.boardEl.classList.add('tut');
       [pick.a, pick.b].forEach(i => { const r = this.recAt(i); if (r) r.el.classList.add('tut-on'); });
       const hand = document.createElement('div');
-      hand.className = 'hand';
-      hand.innerHTML = ico('i-hand');
+      hand.className = 'hand'; hand.innerHTML = ico('i-hand');
       const C = this.cell, pa = this.xy(pick.a), pb = this.xy(pick.b);
       hand.style.setProperty('--hx0', (pa[0] + C * 0.3) + 'px'); hand.style.setProperty('--hy0', (pa[1] + C * 0.45) + 'px');
       hand.style.setProperty('--hx1', (pb[0] + C * 0.3) + 'px'); hand.style.setProperty('--hy1', (pb[1] + C * 0.45) + 'px');
@@ -1519,6 +1182,15 @@ p { margin: 0; }
       $$('.pc.tut-on').forEach(e => e.classList.remove('tut-on'));
       $$('.hand', this.fxEl).forEach(h => h.remove());
       this.tut = null;
+    },
+
+    outOfMoves() {
+      this.busy = true;
+      this.select(-1);
+      openModal({
+        html: '<div class="ribbon-h">Out of moves</div><h2>Not this time</h2><p class="lead" style="text-align:center">You ran out of moves before finishing the goal.</p><div class="actions"><button class="btn btn-red btn-xl" data-act="retry">Try again</button></div>',
+        actions: { retry: (t, m) => { m.close(); Play.start(); } }
+      });
     },
 
     async win() {
@@ -1536,30 +1208,14 @@ p { margin: 0; }
         this.hud(this.g.snapshot());
       }
       const g = this.g, stars = g.starsFor(g.score);
-      openWin(this.L, { stars: stars });
+      openWin({ stars: stars });
     }
   };
 
-  const ACTIONS = {
-    enter: () => {
-      showScreen('game');
-      Play.start(1);
-    }
-  };
-  document.addEventListener('click', e => {
-    const t = e.target.closest('[data-action]');
-    if (!t || t.disabled) return;
-    const fn = ACTIONS[t.dataset.action];
-    if (fn) fn();
-  });
-
-  $('#title-flag').innerHTML = flagSVG(0);
-  $('#bunting').innerHTML = buntingSVG();
-  $('#seal-svg').innerHTML = sealSVG();
+  // Initialize and jump straight into Level 1
   Play.init();
-  showScreen('title');
+  Play.start();
 
 })();
 </script>
-
 </body></html>
